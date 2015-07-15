@@ -1,0 +1,7 @@
+{
+  "name": "Arnouxor/Ajaxosor",
+  "description": "Make your Codeigniter ajax' calls beautiful",
+  "require": {
+    "php": ">=5.3.0",
+  }
+}
