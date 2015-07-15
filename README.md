@@ -1,2 +1,2 @@
-# ajaxosor
-Optimize your ajax call with CodeIgniter 
+# Ajaxosor
+Optimize your ajax' calls with CodeIgniter 
