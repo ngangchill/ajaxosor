@@ -1,5 +1,6 @@
 {
   "name": "arnouxor/ajaxosor",
+  "version": "1.0.0",
   "description": "Make your Codeigniter ajax' calls beautiful",
   "require": {
     "php": ">=5.4.0"
