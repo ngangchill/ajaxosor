@@ -32,12 +32,12 @@ class Ajax_lib
 
     /**
      * Traitement général de la requête ajax
-     * @param $config la config pour valider les champs avec le form_validation
-     * @param $type le type de fichier contenant le code de traitement, un model ou une libraire
-     * @param $file la lib ou le model contenant le code de traitement
-     * @param $method la méthode contenant le code de traitement
-     * @param string $msg le message ajax de retour
-     * @param null $form_id l'id du formulaire (pour traitemant automatique des erreurs en retour)
+     * @param $config, la config pour valider les champs avec le form_validation
+     * @param $type, le type de fichier contenant le code de traitement, un model ou une libraire
+     * @param $file, la lib ou le model contenant le code de traitement
+     * @param $method, la méthode contenant le code de traitement
+     * @param string, $msg le message ajax de retour
+     * @param null, $form_id l'id du formulaire (pour traitemant automatique des erreurs en retour)
      */
     public function process($config, $type, $file, $method, $msg = "", $form_id = null)
     {
@@ -63,6 +63,7 @@ class Ajax_lib
             $b_error = TRUE;
         } else {
             switch ($type) {
+                default:
                 case "library" :
                     $typepath = "libraries";
                     break;
