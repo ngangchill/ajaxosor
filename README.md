@@ -16,6 +16,5 @@ UTILISATION
         $config = array(
             array('field' => 'iuser', 'label' => '', 'rules' => 'trim|min_length[10]|max_length[1000]', 'transformation' => 'decrypt='.$this->salt.'|object=\gmb\user_model'),
         );
-
         $this->ajaxosor->process($config, "library", "user_lib", "draw_followers");
     }
