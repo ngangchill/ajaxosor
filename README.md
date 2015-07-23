@@ -1,16 +1,19 @@
 # Ajaxosor
 Optimize your ajax' calls with CodeIgniter 
 
+## Installation
 
 Create the file /application/libraries/Ajaxosor.php in your codeigniter's project 
 Add the following code in it
 
+```php
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH.'/third_party/ajaxosor/Ajaxasor.php');
+```
 
+## Utilisation
 
-UTILISATION 
-
+```php
    public function ajax_show_followers()
     {
         $config = array(
@@ -18,3 +21,4 @@ UTILISATION
         );
         $this->ajaxosor->process($config, "library", "user_lib", "draw_followers");
     }
+```    
