@@ -29,8 +29,6 @@ class Ajaxosor
     {
         $this->CI = &get_instance();
 
-        $this->CI->load->library("secure");
-
     }
 
     /**
@@ -127,7 +125,9 @@ class Ajaxosor
 
                         // decryptage de variable
                         if (strpos($tranform_method, "decrypt") !== FALSE) {
-                            $result = $this->CI->secure->decrypt($var, $particules[1], FALSE); // on décrypt l'id user
+
+                            $this->CI->load->library("encryption");
+                            $result = $this->CI->encryption->decrypt(strtr(base64_encode($var), '+=/', '.-~'));
                         }
 
                         // transformation de variable en objet
@@ -210,18 +210,6 @@ class Ajaxosor
 
     }
 
-
-    /**
-     * Retour de l'appel AJAX
-     */
-    public function ajaxOutput()
-    {
-
-        if (is_object($this->results["value"]) || is_array($this->results["value"])) {
-            $this->results["value"] = json_encode($this->results["value"]);
-        }
-        $this->CI->output->set_output(json_encode($this->results));
-    }
 
 }
 
