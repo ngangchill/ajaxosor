@@ -125,10 +125,10 @@ class Ajaxosor
 
                         // decryptage de variable
                         if (strpos($tranform_method, "decrypt") !== FALSE) {
-
                             $this->CI->load->library("encryption");
-                            $result = $this->CI->encryption->decrypt(strtr(base64_encode($var), '+=/', '.-~'));
+                            $result = $this->CI->encryption->decrypt(base64_decode(strtr($var, '.-~', '+=/')));
                         }
+
 
                         // transformation de variable en objet
                         if (strpos($tranform_method, "object") !== FALSE) {
