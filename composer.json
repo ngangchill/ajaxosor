@@ -2,7 +2,7 @@
   "name": "arnouxor/ajaxosor",
   "description": "Make your Codeigniter ajax' calls beautiful",
   "type": "codeigniter-third-party",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "require": {
     "php": ">=5.4.0"
   }
